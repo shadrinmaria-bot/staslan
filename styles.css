@@ -632,7 +632,7 @@ main > .banner { margin-top: 0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 58%;
+  object-position: right 45%;
 }
 
 /* a scrim, so the type holds against whatever photograph sits behind it */
@@ -641,11 +641,17 @@ main > .banner { margin-top: 0; }
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to top,
-    oklch(0.15 0.012 45 / 0.9) 0%,
-    oklch(0.15 0.012 45 / 0.6) 40%,
-    oklch(0.15 0.012 45 / 0.15) 76%,
-    oklch(0.15 0.012 45 / 0.05) 100%);
+  background:
+    linear-gradient(to right,
+      oklch(0.15 0.012 45 / 0.62) 0%,
+      oklch(0.15 0.012 45 / 0.42) 34%,
+      oklch(0.15 0.012 45 / 0.08) 62%,
+      oklch(0.15 0.012 45 / 0) 100%),
+    linear-gradient(to top,
+      oklch(0.15 0.012 45 / 0.72) 0%,
+      oklch(0.15 0.012 45 / 0.42) 38%,
+      oklch(0.15 0.012 45 / 0.08) 74%,
+      oklch(0.15 0.012 45 / 0) 100%);
 }
 
 .banner-text {
@@ -658,7 +664,7 @@ main > .banner { margin-top: 0; }
 
 .banner h1 {
   margin-bottom: 0;
-  max-width: 26ch;
+  max-width: 18ch;
   color: oklch(0.975 0.008 70);
 }
 
@@ -771,6 +777,10 @@ main > .banner { margin-top: 0; }
 @media (max-width: 46rem) {
   .intro { grid-template-columns: 1fr; gap: var(--space-lg); }
   .intro .pull { max-width: none; }
+
+  /* the narrow box would crop to the portrait alone, losing the bowl */
+  .banner { min-height: 22rem; }
+  .banner img { object-position: 62% 42%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

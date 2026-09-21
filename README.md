@@ -65,8 +65,9 @@ Eight photographs in `images/`, each served as WebP with a JPEG fallback:
 
 Heroes carry `fetchpriority="high"`, everything below the fold is
 `loading="lazy"`. Formats follow the position: heroes square or 3:2, in-body
-figures 3:2, the wide band on the Places page 2:1. The home banner is
-full-bleed and uncropped. Together they weigh about 820 KB as WebP.
+figures 3:2, the wide band on the Places page 2:1. The home banner is full-bleed,
+cropped from its right edge so a narrow window never cuts the subject.
+Together they weigh about 660 KB as WebP.
 
 `images/bowl-top.svg` is the one drawing left in the repo — it is the
 browser-tab icon, which needs to stay vector. The other illustrations were

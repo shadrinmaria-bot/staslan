@@ -1,12 +1,13 @@
 # Image prompts
 
-The seven photographs on the site were generated from these prompts and are
+The eight photographs on the site were generated from these prompts and are
 live in `images/` — keep this file as the reference for replacing any of them,
 so a new picture lands in the same set rather than beside it.
 
-Prompts for generating the seven site images. They share one house-style block
-so the whole set reads as a single commissioned shoot rather than seven
-unrelated pictures — paste that block into **every** prompt.
+They share one house-style block, which is what makes the set read as a single
+commissioned shoot rather than eight unrelated pictures — paste that block
+into **every** prompt. The exception is the banner, prompt 8, which starts
+from a photograph of its own.
 
 ## How to use
 
@@ -114,16 +115,23 @@ This one replaces the Israel↔Japan diagram, so its caption will change with it
 
 ## 8 · Banner, from your own photograph — `08-banner.jpg` · 21:9 (2400 × 1030)
 
+**Done** — the banner is now Stas at a counter at night, made from his own
+photograph with variant A below. The notes stay here for regenerating it.
+
 This one is image-to-image: you supply a photograph of yourself holding a
 bowl, and the model relights and reframes it into the site's banner rather
-than inventing a new person. The file name is already wired in, so dropping a
-new `08-banner` in `images/` is the whole swap. Until then the banner reuses
-the alley photograph.
+than inventing a new person. Dropping a new `08-banner` in `images/` is the
+whole swap.
 
 Two things the banner needs from the composition, whichever variant you pick:
 **you on the right, the left two-thirds quiet**, because the label and the
 title sit bottom-left over the photograph; and **width** — it spans the whole
 window, so anything under about 2000 px softens on a large screen.
+
+The page crops the banner from the right edge, so a horizontal crop only ever
+eats the empty left side and never the subject. On a phone the box is close to
+square and keeps roughly the right half of the frame, so the bowl wants to be
+somewhere in the right two-thirds, not at the far left.
 
 ### The source photograph
 
