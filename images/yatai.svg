@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="A minimal drawing of a yatai, a Japanese mobile ramen cart, with a paper lantern, a steaming pot and a customer at the counter.">
-  <rect width="640" height="420" fill="#f2efe9"/>
+  <rect width="640" height="420" fill="#f7f0e9"/>
 
   <!-- moon -->
   <circle cx="556" cy="76" r="30" fill="#e6e0d3"/>
-  <circle cx="545" cy="68" r="25" fill="#f2efe9"/>
+  <circle cx="545" cy="68" r="25" fill="#f7f0e9"/>
 
   <!-- cart: roof and posts -->
   <g stroke="#241f1b" stroke-width="2.2">
@@ -15,12 +15,12 @@
   <!-- noren curtain -->
   <g>
     <rect x="172" y="124" width="236" height="46" fill="#2f3a44"/>
-    <g stroke="#f2efe9" stroke-width="3">
+    <g stroke="#f7f0e9" stroke-width="3">
       <line x1="231" y1="158" x2="231" y2="170"/>
       <line x1="290" y1="158" x2="290" y2="170"/>
       <line x1="349" y1="158" x2="349" y2="170"/>
     </g>
-    <text x="290" y="152" text-anchor="middle" font-family="Georgia, serif" font-size="20" letter-spacing="9" fill="#f2efe9">RAMEN</text>
+    <text x="290" y="152" text-anchor="middle" font-family="Georgia, serif" font-size="20" letter-spacing="9" fill="#f7f0e9">RAMEN</text>
   </g>
 
   <!-- counter and cart body -->
@@ -29,9 +29,9 @@
     <rect x="166" y="262" width="248" height="80" fill="#f7f4ee"/>
     <line x1="166" y1="300" x2="414" y2="300"/>
     <line x1="290" y1="262" x2="290" y2="342"/>
-    <circle cx="212" cy="350" r="18" fill="#f2efe9"/>
+    <circle cx="212" cy="350" r="18" fill="#f7f0e9"/>
     <circle cx="212" cy="350" r="5" fill="#241f1b"/>
-    <circle cx="368" cy="350" r="18" fill="#f2efe9"/>
+    <circle cx="368" cy="350" r="18" fill="#f7f0e9"/>
     <circle cx="368" cy="350" r="5" fill="#241f1b"/>
   </g>
 

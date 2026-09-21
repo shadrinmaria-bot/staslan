@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img" aria-label="A minimal diagram linking Japan and Israel, the two places on this page.">
-  <rect width="640" height="300" fill="#f2efe9"/>
+  <rect width="640" height="300" fill="#f7f0e9"/>
 
   <!-- dotted flight path -->
   <path d="M 424 108 Q 320 30 206 148" fill="none" stroke="#a8a29a" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round"/>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="A bowl of ramen seen from above: noodles in broth with egg, chashu pork, nori and scallions.">
-  <rect width="400" height="400" fill="#f2efe9"/>
+  <rect width="400" height="400" fill="#f7f0e9"/>
 
   <!-- bowl -->
   <circle cx="200" cy="200" r="178" fill="none" stroke="#241f1b" stroke-width="1" opacity="0.25"/>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="A minimal ramen shop front with a noren curtain, a lantern and a counter seen through the doorway.">
-  <rect width="640" height="420" fill="#f2efe9"/>
+  <rect width="640" height="420" fill="#f7f0e9"/>
 
   <!-- facade -->
   <g stroke="#241f1b" stroke-width="2.4">
@@ -8,7 +8,7 @@
     <!-- signboard -->
     <rect x="96" y="76" width="448" height="48" fill="#2f3a44" stroke="#241f1b"/>
   </g>
-  <text x="320" y="109" text-anchor="middle" font-family="Georgia, serif" font-size="24" letter-spacing="12" fill="#f2efe9">RAMEN</text>
+  <text x="320" y="109" text-anchor="middle" font-family="Georgia, serif" font-size="24" letter-spacing="12" fill="#f7f0e9">RAMEN</text>
 
   <!-- doorway -->
   <g stroke="#241f1b" stroke-width="2">
@@ -35,7 +35,7 @@
   <g>
     <rect x="204" y="156" width="232" height="8" rx="3" fill="#241f1b"/>
     <rect x="208" y="164" width="224" height="66" fill="#b8472d" stroke="#241f1b" stroke-width="1.4"/>
-    <g stroke="#f2efe9" stroke-width="4">
+    <g stroke="#f7f0e9" stroke-width="4">
       <line x1="253" y1="176" x2="253" y2="230"/>
       <line x1="298" y1="176" x2="298" y2="230"/>
       <line x1="343" y1="176" x2="343" y2="230"/>
