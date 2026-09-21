@@ -27,12 +27,12 @@
   --accent-deep: oklch(0.470 0.155 42);
   --accent-bright: oklch(0.721 0.182 52); /* #fa7d09 — marks and fills, never type */
 
-  /* the light theme ends on the dark brown rather than trailing off */
-  --foot-bg:    oklch(0.272 0.026 71);
-  --foot-ink:   oklch(0.930 0.014 80);
-  --foot-faint: oklch(0.720 0.022 70);
-  --foot-link:  oklch(0.760 0.160 56);
-  --foot-rule:  transparent;
+  /* light: the page simply ends, on a hairline */
+  --foot-bg:    transparent;
+  --foot-ink:   var(--ink);
+  --foot-faint: var(--ink-faint);
+  --foot-link:  var(--ink-faint);
+  --foot-rule:  var(--rule);
 
   --hairline: color-mix(in oklab, var(--ink) 14%, transparent);
 
@@ -951,11 +951,11 @@ main > .banner { margin-top: 0; }
     --accent:      oklch(0.721 0.182 52);   /* #fa7d09 */
     --accent-deep: oklch(0.800 0.135 58);
     --accent-bright: oklch(0.658 0.231 35); /* #ff4301 — ornament */
-    --foot-bg:    transparent;
+    --foot-bg:    var(--paper-warm);
     --foot-ink:   var(--ink);
-    --foot-faint: var(--ink-faint);
-    --foot-link:  var(--ink-faint);
-    --foot-rule:  var(--rule);
+    --foot-faint: var(--ink-soft);
+    --foot-link:  var(--accent-deep);
+    --foot-rule:  transparent;
     --hairline: color-mix(in oklab, var(--ink) 18%, transparent);
     --egg-fill: oklch(0.945 0.016 82);
     --egg-yolk-fill: var(--accent);
@@ -981,11 +981,11 @@ main > .banner { margin-top: 0; }
   --accent:      oklch(0.721 0.182 52);   /* #fa7d09 */
   --accent-deep: oklch(0.800 0.135 58);
   --accent-bright: oklch(0.658 0.231 35); /* #ff4301 — ornament */
-  --foot-bg:    transparent;
+  --foot-bg:    var(--paper-warm);
   --foot-ink:   var(--ink);
-  --foot-faint: var(--ink-faint);
-  --foot-link:  var(--ink-faint);
-  --foot-rule:  var(--rule);
+  --foot-faint: var(--ink-soft);
+  --foot-link:  var(--accent-deep);
+  --foot-rule:  transparent;
   --hairline: color-mix(in oklab, var(--ink) 18%, transparent);
   --egg-fill: oklch(0.945 0.016 82);
   --egg-yolk-fill: var(--accent);

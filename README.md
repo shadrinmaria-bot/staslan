@@ -32,8 +32,9 @@ The design direction is recorded in `.impeccable.md`; the short version:
   those four almost literally — browns as ground and surface, oranges as
   accent and ornament. The light theme borrows the browns as its ink, which is
   where its contrast comes from, and keeps the oranges for accents over a
-  near-white. Every text pair on every page clears 4.5:1 in both themes;
-  body text runs 13–14.5:1.
+  near-white. The footer differs by theme on purpose: a hairline and the page
+  in the light one, a band of the second brown in the dark one. Every text
+  pair on every page clears 4.5:1 in both themes; body text runs 13–14.5:1.
 - **Space** — a 4pt scale with semantic names, fluid section rhythm, body
   measure capped at 66ch.
 - **Print devices** — hairline rules, dotted menu leaders in the ingredient
