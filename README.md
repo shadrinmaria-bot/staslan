@@ -11,9 +11,9 @@ A small static site about ramen, in English, three pages sharing one minimalist 
 
 The masthead links home; the three navigation items are the sub-pages.
 
-Plain HTML, two stylesheets, no JavaScript, no build step and no dependencies:
-open `index.html` in a browser, or serve the folder with anything
-(`npx http-server .`).
+Plain HTML, two stylesheets and one small script for the theme switch. No
+build step, no dependencies: open `index.html` in a browser, or serve the
+folder with anything (`npx http-server .`).
 
 ## Style
 
@@ -36,8 +36,22 @@ The design direction is recorded in `.impeccable.md`; the short version:
   lists, numbered steps and places, one raised initial per page, a timeline
   split into two eras on parallel hairline axes, and a method split into two
   phases with each step's clock out in the right margin.
-- Responsive to phone width, dark theme via `prefers-color-scheme`, one
-  staggered reveal on load that respects `prefers-reduced-motion`.
+- Responsive to phone width, dark theme via `prefers-color-scheme` plus a
+  switch, one staggered reveal on load that respects `prefers-reduced-motion`.
+
+## Theme
+
+The stylesheet carries both palettes and follows the system by default. The
+switch in the masthead — an ajitama, drawn in line for the light theme and
+filled for the dark one — writes `data-theme` on `<html>` and remembers the
+choice in `localStorage` under `ramen-theme`; until someone picks a side, the
+page keeps following the system, including a change made while it is open.
+
+`theme.js` is loaded synchronously in `<head>` on purpose. The stored theme
+has to be on the element before the first paint, or the page flashes the wrong
+palette; a deferred script would do exactly that. It is a few hundred bytes,
+local, and every `localStorage` access is wrapped, since private windows throw
+rather than return null.
 
 ## Fonts
 

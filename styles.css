@@ -22,6 +22,13 @@
 
   --hairline: color-mix(in oklab, var(--ink) 12%, transparent);
 
+  /* the switch is an ajitama: line only here, filled in the dark theme */
+  --egg-fill: none;
+  --egg-yolk-fill: none;
+  --egg-line: var(--ink-soft);
+  --egg-yolk-line: var(--ink-soft);
+  --egg-yolk-hover: var(--accent);
+
   /* ---- type -------------------------------------------------- */
   --display: "Shippori Mincho", "Iowan Old Style", Palatino, Georgia, serif;
   --text:    "Zen Kaku Gothic New", ui-sans-serif, -apple-system, "Segoe UI", Helvetica, sans-serif;
@@ -185,6 +192,61 @@ nav a[aria-current="page"]::after {
   transform: scaleX(1);
 }
 
+/* ---------- theme switch -------------------------------------- */
+
+.head-end {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.25rem);
+}
+
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-right: -0.4rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.theme-toggle svg {
+  display: block;
+  width: 1.375rem;
+  height: 1.375rem;
+  transition: transform var(--slow) var(--ease-out);
+}
+
+.egg-white,
+.egg-yolk {
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+  transition: fill var(--fast) ease, stroke var(--fast) ease;
+}
+
+.egg-white {
+  fill: var(--egg-fill);
+  stroke: var(--egg-line);
+}
+
+.egg-yolk {
+  fill: var(--egg-yolk-fill);
+  stroke: var(--egg-yolk-line);
+}
+
+/* hovering the outline egg fills the yolk — a look at what the click does */
+.theme-toggle:hover .egg-yolk,
+.theme-toggle:focus-visible .egg-yolk {
+  fill: var(--egg-yolk-hover);
+  stroke: var(--egg-yolk-hover);
+}
+
+.theme-toggle:hover svg { transform: scale(1.08); }
+.theme-toggle:active svg { transform: scale(0.96); }
 /* ---------- headings ----------------------------------------- */
 
 h1, h2, h3 {
@@ -787,6 +849,10 @@ main > .banner { margin-top: 0; }
   .card-art img,
   .card-go span,
   nav a::after { transition: none; }
+
+  .theme-toggle svg { transition: none; }
+  .theme-toggle:hover svg,
+  .theme-toggle:active svg { transform: none; }
 }
 
 /* ---------- page-load reveal --------------------------------- */
@@ -870,6 +936,11 @@ main > .banner { margin-top: 0; }
     --accent:      oklch(0.712 0.125 36);
     --accent-deep: oklch(0.790 0.110 40);
     --hairline: color-mix(in oklab, var(--ink) 18%, transparent);
+    --egg-fill: oklch(0.94 0.018 85);
+    --egg-yolk-fill: oklch(0.78 0.155 68);
+    --egg-line: oklch(0.94 0.018 85);
+    --egg-yolk-line: oklch(0.60 0.14 56);
+    --egg-yolk-hover: oklch(0.85 0.16 72);
     color-scheme: dark;
   }
 
@@ -889,6 +960,11 @@ main > .banner { margin-top: 0; }
   --accent:      oklch(0.712 0.125 36);
   --accent-deep: oklch(0.790 0.110 40);
   --hairline: color-mix(in oklab, var(--ink) 18%, transparent);
+  --egg-fill: oklch(0.94 0.018 85);
+  --egg-yolk-fill: oklch(0.78 0.155 68);
+  --egg-line: oklch(0.94 0.018 85);
+  --egg-yolk-line: oklch(0.60 0.14 56);
+  --egg-yolk-hover: oklch(0.85 0.16 72);
   color-scheme: dark;
 }
 
@@ -896,6 +972,7 @@ main > .banner { margin-top: 0; }
 
 @media print {
   :root { --paper: #fff; --ink: #000; }
+  .theme-toggle { display: none; }
   * { animation: none !important; opacity: 1 !important; transform: none !important; }
   .site-head nav, .site-foot { display: none; }
   body { background: #fff; color: #000; }
