@@ -1,5 +1,9 @@
 # Image prompts
 
+The seven photographs on the site were generated from these prompts and are
+live in `images/` — keep this file as the reference for replacing any of them,
+so a new picture lands in the same set rather than beside it.
+
 Prompts for generating the seven site images. They share one house-style block
 so the whole set reads as a single commissioned shoot rather than seven
 unrelated pictures — paste that block into **every** prompt.
@@ -8,9 +12,9 @@ unrelated pictures — paste that block into **every** prompt.
 
 1. Generate each image with the house style + the per-image prompt below.
 2. Save it under the **filename** given, at the **aspect ratio** given.
-3. Put the files in `images/` and push. Long edge ≤ 2000 px, JPEG quality ~85.
-4. The site then gets wired to them (frames, `alt` text, captions, and WebP
-   versions for weight).
+3. Put the files in `images/` and push. Long edge ≤ 2000 px.
+4. Each one is then converted to WebP plus a JPEG fallback and wired into the
+   page with its own `alt` text; the panorama is cropped to 2:1 for the band.
 
 Keep `images/bowl-top.svg` in the repo even after swapping the hero — it is
 also the browser-tab icon, which needs to stay vector.

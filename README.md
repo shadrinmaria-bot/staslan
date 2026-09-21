@@ -19,6 +19,11 @@ The design direction is recorded in `.impeccable.md`; the short version:
 - **Type** — Shippori Mincho for display, Zen Kaku Gothic New for text. Both
   are contemporary Japanese faces whose Latin reads warm and precise, which
   suits the subject better than another editorial serif.
+- **Scale** — three text sizes and two display steps, and nothing else, so the
+  three pages share one hierarchy: 19px for leads, item headings and every
+  accent numeral; 17px for all running text; 13px for notes, captions and
+  uppercase labels. Years, step numbers and place numbers are a single rule —
+  same face, size, weight and colour wherever they appear.
 - **Colour** — OKLCH throughout: warm paper, warm ink and one vermilion
   accent, with every neutral tinted slightly toward the accent hue. Faint text
   clears 4.5:1 against the paper in both themes.
@@ -44,11 +49,26 @@ python3 tools/build-fonts.py
 
 ## Images
 
-The illustrations in `images/` are hand-written SVG in the site's palette — no
-external requests, no licensing to worry about, sharp at any size.
+Seven photographs in `images/`, each served as WebP with a JPEG fallback:
 
-`IMAGE-PROMPTS.md` holds a matched set of generation prompts if you want
-photographs instead, with the filename and aspect ratio each one should use.
+```html
+<picture>
+  <source srcset="images/01-hero-bowl.webp" type="image/webp">
+  <img src="images/01-hero-bowl.jpg" alt="…" width="1024" height="1024">
+</picture>
+```
+
+Heroes carry `fetchpriority="high"`, everything below the fold is
+`loading="lazy"`. Formats follow the position: heroes square or 3:2, in-body
+figures 3:2, the wide band on the Places page 2:1. Together they weigh about
+630 KB as WebP.
+
+`images/bowl-top.svg` is the one drawing left in the repo — it is the
+browser-tab icon, which needs to stay vector. The other illustrations were
+replaced by the photographs and remain in git history.
+
+`IMAGE-PROMPTS.md` holds the prompts the photographs were generated from, so a
+replacement can be matched to the same set.
 
 To use real photographs instead, drop them in `images/` and change the `src` on
 the relevant `<img>`: the layout sizes images by their container, so a landscape
