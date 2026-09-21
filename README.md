@@ -4,9 +4,12 @@ A small static site about ramen, in English, three pages sharing one minimalist 
 
 | Page | File | Content |
 | --- | --- | --- |
-| Story | `index.html` | A short history of ramen: arrival from China, the postwar yatai years, instant noodles, a timeline, the anatomy of a bowl, regional styles. |
+| Home | `index.html` | A full-bleed banner, a short introduction, and three photographic doors into the pages below. |
+| Story | `story.html` | A short history of ramen: arrival from China, the postwar yatai years, instant noodles, a timeline, the anatomy of a bowl, regional styles. |
 | Recipe | `recipe.html` | Tokyo-style shoyu ramen for two: ingredient lists, eight steps, notes. |
 | Places | `places.html` | Five well-known ramen places — two in Tel Aviv, three in Japan — plus counter etiquette. |
+
+The masthead links home; the three navigation items are the sub-pages.
 
 Plain HTML, two stylesheets, no JavaScript, no build step and no dependencies:
 open `index.html` in a browser, or serve the folder with anything
@@ -51,7 +54,7 @@ python3 tools/build-fonts.py
 
 ## Images
 
-Seven photographs in `images/`, each served as WebP with a JPEG fallback:
+Eight photographs in `images/`, each served as WebP with a JPEG fallback:
 
 ```html
 <picture>
@@ -62,8 +65,8 @@ Seven photographs in `images/`, each served as WebP with a JPEG fallback:
 
 Heroes carry `fetchpriority="high"`, everything below the fold is
 `loading="lazy"`. Formats follow the position: heroes square or 3:2, in-body
-figures 3:2, the wide band on the Places page 2:1. Together they weigh about
-630 KB as WebP.
+figures 3:2, the wide band on the Places page 2:1. The home banner is
+full-bleed and uncropped. Together they weigh about 820 KB as WebP.
 
 `images/bowl-top.svg` is the one drawing left in the repo — it is the
 browser-tab icon, which needs to stay vector. The other illustrations were

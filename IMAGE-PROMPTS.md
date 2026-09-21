@@ -112,6 +112,24 @@ Where it goes: Places hero.
 Where it goes: Places, the wide band between the Israel and Japan sections.
 This one replaces the Israel↔Japan diagram, so its caption will change with it.
 
+## 8 · Banner — `08-banner.jpg` · 21:9 (2400 × 1030)
+
+The home page banner currently reuses the alley photograph, so the same
+picture appears twice on the site. This prompt replaces it; the file name is
+already wired in, so dropping a new `08-banner` in `images/` is the whole
+swap.
+
+> A wide, dark, atmospheric banner: the far end of a ramen counter late at
+> night, three bowls set out along the worn wood, steam drifting up through
+> one warm overhead light. Deep brown-black shadow fills the left third of
+> the frame with almost nothing in it. Warm light pooled to the right. No
+> faces, no hands, no readable signage.
+
+Where it goes: the full-bleed banner on the home page. Keep the left third
+quiet — the title and label sit there, in near-white over the photograph.
+Generate it wide: the banner spans the whole window, so anything narrower
+than about 2000 px softens on a large screen.
+
 ---
 
 ## If you would rather keep illustrations

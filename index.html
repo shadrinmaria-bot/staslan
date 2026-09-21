@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ramen — A Short History</title>
-<meta name="description" content="How a Chinese noodle soup became Japan's most obsessed-over dish: a short, minimal history of ramen.">
+<title>Ramen — A Ramen Notebook</title>
+<meta name="description" content="Stas's ramen notebook: where the bowl came from, how to build one at home, and the counters worth queueing for.">
 <link rel="icon" href="images/bowl-top.svg" type="image/svg+xml">
 <meta name="theme-color" content="#fdf9f6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#17110f" media="(prefers-color-scheme: dark)">
@@ -18,7 +18,7 @@
     <a class="logo" href="index.html">Ra<span>·</span>men</a>
     <nav aria-label="Main">
       <ul>
-        <li><a href="index.html" aria-current="page">Story</a></li>
+        <li><a href="story.html">Story</a></li>
         <li><a href="recipe.html">Recipe</a></li>
         <li><a href="places.html">Places</a></li>
       </ul>
@@ -27,121 +27,67 @@
 </header>
 
 <main>
+
+  <section class="banner">
+    <picture>
+      <source srcset="images/08-banner.webp" type="image/webp">
+      <img src="images/08-banner.jpg" alt="A narrow alley of ramen shops at night, paper lanterns receding into the distance above wet asphalt." width="1264" height="848" fetchpriority="high">
+    </picture>
+    <div class="wrap banner-text">
+      <p class="eyebrow">A ramen notebook</p>
+      <h1>Everything I know about one bowl of noodles.</h1>
+    </div>
+  </section>
+
   <div class="wrap">
 
-    <section class="hero">
-      <div>
-        <p class="eyebrow">A short history</p>
-        <h1>A bowl that took a century to get simple.</h1>
-        <p class="lead">Ramen is not ancient. It arrived in Japan as a Chinese noodle soup barely more than a hundred years ago, was rebuilt by port cities, war, cheap wheat and street carts, and only recently became a craft people queue an hour for.</p>
-        <p class="note">Four things in every bowl: broth, tare, noodles, toppings. Everything else is regional argument.</p>
+    <section class="intro">
+      <p class="pull">My name is Stas, and I really love ramen.</p>
+      <div class="intro-body">
+        <p>Enough that I went and read where it came from, learned to build a bowl at home, and keep a short list of the counters worth queueing for. No restaurant, no brand, no newsletter — just the three things I would tell you if you asked me over a beer.</p>
+        <p class="note">Three pages, one dish. Start anywhere.</p>
       </div>
-      <figure class="hero-art">
-        <div class="frame">
+    </section>
+
+    <section class="cards">
+      <a class="card" href="story.html">
+        <span class="card-art">
           <picture>
-            <source srcset="images/01-hero-bowl.webp" type="image/webp">
-            <img src="images/01-hero-bowl.jpg" alt="A bowl of shoyu ramen seen from above: rolled chashu pork, a halved marinated egg, nori and scallions in clear amber broth, with chopsticks resting across the rim." width="1024" height="1024" fetchpriority="high">
+            <source srcset="images/02-yatai-night.webp" type="image/webp">
+            <img src="images/02-yatai-night.jpg" alt="" width="1264" height="848" loading="lazy" decoding="async">
           </picture>
-        </div>
-      </figure>
-    </section>
+        </span>
+        <span class="num">01</span>
+        <h3>A short history</h3>
+        <p>How a Chinese noodle soup arrived by ship, survived a war on cheap wheat and became the dish people queue an hour for.</p>
+        <span class="card-go">Read the story <span aria-hidden="true">→</span></span>
+      </a>
 
-    <hr class="rule">
+      <a class="card" href="recipe.html">
+        <span class="card-art">
+          <picture>
+            <source srcset="images/04-ingredients.webp" type="image/webp">
+            <img src="images/04-ingredients.jpg" alt="" width="1264" height="848" loading="lazy" decoding="async">
+          </picture>
+        </span>
+        <span class="num">02</span>
+        <h3>Shoyu, at home</h3>
+        <p>Clear chicken broth, a soy tare that does the seasoning, and eight steps — five of them done long before anyone sits down.</p>
+        <span class="card-go">Cook a bowl <span aria-hidden="true">→</span></span>
+      </a>
 
-    <section>
-      <h2>Arrival by port</h2>
-      <div class="split">
-        <div>
-          <p class="dropcap">When Japan reopened its ports in the second half of the 19th century, Chinese merchants and cooks settled in Yokohama, Kobe and Nagasaki. In their kitchens was a plain, everyday thing: wheat noodles in a savoury broth.</p>
-          <p>The Japanese called it <em>shina soba</em>, and later <em>chuka soba</em> — “Chinese noodles.” The word <em>ramen</em> came much later and won by accident, helped along by radio, instant packets and shop signs.</p>
-          <p>In 1910 a restaurant in Tokyo's Asakusa district, Rairaiken, hired Chinese cooks and put the dish in front of a Japanese crowd. It is usually named as the first ramen shop, and the soy-flavoured chicken broth it served is still recognisable as Tokyo-style shoyu ramen today.</p>
-        </div>
-        <figure>
-          <div class="frame">
-            <picture>
-              <source srcset="images/02-yatai-night.webp" type="image/webp">
-              <img src="images/02-yatai-night.jpg" alt="A wooden yatai cart at night, lit by a red paper lantern, steam rising from the pot while one customer eats at the counter." width="1264" height="848" loading="lazy" decoding="async">
-            </picture>
-          </div>
-          <figcaption>The yatai: a kitchen on wheels, and where postwar ramen was sold.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section>
-      <h2>Wheat, rubble and carts</h2>
-      <p>The dish became Japanese in the years after 1945. Rice was scarce; imported American wheat flour was not. Black markets and street stalls turned that flour into noodles, and demobilised men with no work turned a cart, a pot and a lantern into a living. Ramen stopped being a restaurant novelty and became what you ate late, cheap, standing up.</p>
-      <p>Then it scaled. In 1958 Momofuku Ando fried and dried a noodle block and sold it as Chikin Ramen; in 1971 the same company put it in a foam cup. Instant ramen carried the word around the world — and quietly set up the contrast that the shops now trade on: two minutes in a cup, or twelve hours in a stockpot.</p>
-    </section>
-
-    <section>
-      <h2>Timeline</h2>
-      <div class="eras">
-        <div class="era">
-          <p class="eyebrow">Arrival &amp; the street · 1859–1955</p>
-          <ol class="timeline">
-            <li><span class="year">1859</span><p>Yokohama opens to foreign trade. A Chinatown forms, and with it the first kitchens serving Chinese wheat-noodle soup in Japan.</p></li>
-            <li><span class="year">1884</span><p>A restaurant in Hakodate advertises <em>nankin soba</em> — among the earliest written records of the dish on a Japanese menu.</p></li>
-            <li><span class="year">1910</span><p>Rairaiken opens in Asakusa, Tokyo, with Chinese cooks and a soy-and-chicken broth. Conventionally counted as the first ramen shop.</p></li>
-            <li><span class="year">1945–55</span><p>Postwar scarcity, imported wheat and thousands of yatai carts turn ramen into everyday street food.</p></li>
-          </ol>
-        </div>
-        <div class="era">
-          <p class="eyebrow">Industry &amp; craft · 1958–2016</p>
-          <ol class="timeline" start="5">
-            <li><span class="year">1958</span><p>Nissin's Chikin Ramen: the noodle block is flash-fried, dried and sold in a bag. Instant ramen is born.</p></li>
-            <li><span class="year">1971</span><p>Cup Noodles. Ramen becomes portable, global, and a word everyone knows.</p></li>
-            <li><span class="year">1980s–90s</span><p>Regional styles become a subject in their own right — Sapporo miso, Hakata tonkotsu, Kitakata, Wakayama. A ramen museum opens in Shin-Yokohama in 1994.</p></li>
-            <li><span class="year">2016</span><p>Tokyo's Tsuta becomes the first ramen shop awarded a Michelin star. Street food, with a tasting-menu obsession behind it.</p></li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Anatomy of a bowl</h2>
-      <div class="cols-2">
-        <div>
-          <h3>Broth — <span class="note">the body</span></h3>
-          <p>Bones, water, time. Chicken and pork for clear <em>chintan</em>; a hard rolling boil for milky <em>paitan</em> and tonkotsu. It carries texture, not primary salt.</p>
-          <h3>Tare — <span class="note">the seasoning</span></h3>
-          <p>A concentrated base spooned into the empty bowl: soy (shoyu), salt (shio) or fermented soybean paste (miso). This is where a shop's signature actually lives.</p>
-        </div>
-        <div>
-          <h3>Noodles — <span class="note">the point</span></h3>
-          <p>Wheat, water, salt and <em>kansui</em> — alkaline mineral water, which gives ramen noodles their yellow tint, springy bite and faint smell. Straight or wavy, thin or thick, matched to the broth.</p>
-          <h3>Toppings — <span class="note">the punctuation</span></h3>
-          <p>Chashu pork, a marinated <em>ajitama</em> egg, scallions, nori, menma bamboo shoots, bean sprouts, corn and butter up north. Restraint is the house style.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Regions, briefly</h2>
-      <div class="split reverse">
-        <figure>
-          <div class="frame">
-            <picture>
-              <source srcset="images/03-bowl-chopsticks.webp" type="image/webp">
-              <img src="images/03-bowl-chopsticks.jpg" alt="Chopsticks lifting a tangle of noodles clear of a steaming bowl of ramen on a wooden counter." width="1264" height="848" loading="lazy" decoding="async">
-            </picture>
-          </div>
-          <figcaption>Serve it hot, in a hot bowl, and eat it immediately.</figcaption>
-        </figure>
-        <div>
-          <p><strong>Tokyo</strong> — soy-seasoned chicken and dashi broth, medium wavy noodles. The original template.</p>
-          <p><strong>Sapporo</strong> — miso tare, lard sealing in the heat, sweetcorn and butter against a Hokkaido winter.</p>
-          <p><strong>Hakata (Fukuoka)</strong> — tonkotsu: pork bones boiled hard for hours into an opaque, collagen-heavy broth, with thin straight noodles you order firm and then refill (<em>kaedama</em>).</p>
-          <p><strong>Kitakata, Wakayama, Onomichi</strong> — and a hundred more towns, each convinced theirs is the reference version.</p>
-        </div>
-      </div>
-    </section>
-
-    <hr class="rule">
-
-    <section>
-      <p class="lead">Next: build one at home, then find someone who does it better than you.</p>
-      <p><a href="recipe.html">The recipe →</a><br><a href="places.html">Where to eat it →</a></p>
+      <a class="card" href="places.html">
+        <span class="card-art">
+          <picture>
+            <source srcset="images/06-shopfront.webp" type="image/webp">
+            <img src="images/06-shopfront.jpg" alt="" width="1264" height="848" loading="lazy" decoding="async">
+          </picture>
+        </span>
+        <span class="num">03</span>
+        <h3>Where to eat it</h3>
+        <p>Five counters worth the trip — two small rooms in Tel Aviv, three institutions in Japan — and how to behave at them.</p>
+        <span class="card-go">Find a counter <span aria-hidden="true">→</span></span>
+      </a>
     </section>
 
   </div>
@@ -149,8 +95,8 @@
 
 <footer class="site-foot">
   <div class="wrap">
-    <span>Ramen — a three-page guide</span>
-    <span>Story · <a href="recipe.html">Recipe</a> · <a href="places.html">Places</a></span>
+    <span>Ramen — a notebook in three pages</span>
+    <span><a href="story.html">Story</a> · <a href="recipe.html">Recipe</a> · <a href="places.html">Places</a></span>
   </div>
 </footer>
 
