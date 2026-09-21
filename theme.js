@@ -11,8 +11,8 @@
 (function () {
   var KEY = 'ramen-theme';
   var root = document.documentElement;
-  var LIGHT = '#fdf9f6';
-  var DARK = '#17110f';
+  var LIGHT = '#fcfbf8';
+  var DARK = '#2f2519';
 
   function stored() {
     try {

@@ -27,9 +27,13 @@ The design direction is recorded in `.impeccable.md`; the short version:
   accent numeral; 17px for all running text; 13px for notes, captions and
   uppercase labels. Years, step numbers and place numbers are a single rule —
   same face, size, weight and colour wherever they appear.
-- **Colour** — OKLCH throughout: warm paper, warm ink and one vermilion
-  accent, with every neutral tinted slightly toward the accent hue. Faint text
-  clears 4.5:1 against the paper in both themes.
+- **Colour** — four colours, in OKLCH: `#2f2519` and `#4a3f35` (the browns of
+  a dark counter) and `#fa7d09` and `#ff4301` (two oranges). The dark theme is
+  those four almost literally — browns as ground and surface, oranges as
+  accent and ornament. The light theme borrows the browns as its ink, which is
+  where its contrast comes from, and keeps the oranges for accents over a
+  near-white. Every text pair on every page clears 4.5:1 in both themes;
+  body text runs 13–14.5:1.
 - **Space** — a 4pt scale with semantic names, fluid section rhythm, body
   measure capped at 66ch.
 - **Print devices** — hairline rules, dotted menu leaders in the ingredient

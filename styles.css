@@ -8,26 +8,40 @@
    =========================================================== */
 
 :root {
-  /* ---- colour ------------------------------------------------ */
-  --paper:       oklch(0.985 0.006 62);
-  --paper-warm:  oklch(0.958 0.012 62);
-  --paper-deep:  oklch(0.936 0.016 60);
-  --ink:         oklch(0.235 0.012 48);
-  --ink-soft:    oklch(0.470 0.018 50);
-  --ink-faint:   oklch(0.550 0.018 52);
-  --rule:        oklch(0.900 0.012 58);
-  --rule-strong: oklch(0.840 0.014 58);
-  --accent:      oklch(0.520 0.155 33);
-  --accent-deep: oklch(0.430 0.140 32);
+  /* ---- colour ------------------------------------------------
+     Four colours carry the site: #2f2519, #4a3f35, #fa7d09, #ff4301.
+     The dark theme is those four almost literally — the two browns as
+     ground and surface, the two oranges as accent and ornament. The
+     light theme borrows the browns for its ink, which is what gives it
+     more contrast than a grey would, and keeps the oranges for accents.
+     ------------------------------------------------------------ */
+  --paper:       oklch(0.988 0.004 80);
+  --paper-warm:  oklch(0.965 0.010 78);
+  --paper-deep:  oklch(0.945 0.014 76);
+  --ink:         oklch(0.272 0.026 71);   /* #2f2519 */
+  --ink-soft:    oklch(0.376 0.022 64);   /* #4a3f35 */
+  --ink-faint:   oklch(0.520 0.026 62);
+  --rule:        oklch(0.860 0.014 74);
+  --rule-strong: oklch(0.760 0.018 70);
+  --accent:      oklch(0.545 0.170 45);
+  --accent-deep: oklch(0.470 0.155 42);
+  --accent-bright: oklch(0.721 0.182 52); /* #fa7d09 — marks and fills, never type */
 
-  --hairline: color-mix(in oklab, var(--ink) 12%, transparent);
+  /* the light theme ends on the dark brown rather than trailing off */
+  --foot-bg:    oklch(0.272 0.026 71);
+  --foot-ink:   oklch(0.930 0.014 80);
+  --foot-faint: oklch(0.720 0.022 70);
+  --foot-link:  oklch(0.760 0.160 56);
+  --foot-rule:  transparent;
+
+  --hairline: color-mix(in oklab, var(--ink) 14%, transparent);
 
   /* the switch is an ajitama: line only here, filled in the dark theme */
   --egg-fill: none;
   --egg-yolk-fill: none;
   --egg-line: var(--ink-soft);
   --egg-yolk-line: var(--ink-soft);
-  --egg-yolk-hover: var(--accent);
+  --egg-yolk-hover: var(--accent-bright);
 
   /* ---- type -------------------------------------------------- */
   --display: "Shippori Mincho", "Iowan Old Style", Palatino, Georgia, serif;
@@ -146,7 +160,7 @@ section { margin-top: var(--section); }
   color: var(--ink);
 }
 
-.logo span { color: var(--accent); }
+.logo span { color: var(--accent-bright); }
 
 nav ul {
   display: flex;
@@ -448,7 +462,7 @@ figcaption {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--accent-bright);
   box-shadow: 0 0 0 3px var(--paper);
 }
 
@@ -656,9 +670,10 @@ figcaption {
 /* ---------- footer ------------------------------------------- */
 
 .site-foot {
-  border-top: 1px solid var(--rule);
-  padding-block: var(--space-xl) var(--space-3xl);
-  color: var(--ink-faint);
+  border-top: 1px solid var(--foot-rule);
+  background: var(--foot-bg);
+  padding-block: var(--space-2xl);
+  color: var(--foot-faint);
   font-size: var(--text-sm);
   letter-spacing: 0.06em;
 }
@@ -670,8 +685,8 @@ figcaption {
   gap: var(--space-xs) var(--space-xl);
 }
 
-.site-foot a { color: var(--ink-faint); }
-.site-foot a:hover { color: var(--ink); }
+.site-foot a { color: var(--foot-link); }
+.site-foot a:hover { color: var(--foot-ink); }
 
 /* ---------- home: banner ------------------------------------- */
 
@@ -705,15 +720,15 @@ main > .banner { margin-top: 0; }
   z-index: -1;
   background:
     linear-gradient(to right,
-      oklch(0.15 0.012 45 / 0.62) 0%,
-      oklch(0.15 0.012 45 / 0.42) 34%,
-      oklch(0.15 0.012 45 / 0.08) 62%,
-      oklch(0.15 0.012 45 / 0) 100%),
+      oklch(0.17 0.026 66 / 0.62) 0%,
+      oklch(0.17 0.026 66 / 0.42) 34%,
+      oklch(0.17 0.026 66 / 0.08) 62%,
+      oklch(0.17 0.026 66 / 0) 100%),
     linear-gradient(to top,
-      oklch(0.15 0.012 45 / 0.72) 0%,
-      oklch(0.15 0.012 45 / 0.42) 38%,
-      oklch(0.15 0.012 45 / 0.08) 74%,
-      oklch(0.15 0.012 45 / 0) 100%);
+      oklch(0.17 0.026 66 / 0.72) 0%,
+      oklch(0.17 0.026 66 / 0.42) 38%,
+      oklch(0.17 0.026 66 / 0.08) 74%,
+      oklch(0.17 0.026 66 / 0) 100%);
 }
 
 .banner-text {
@@ -735,10 +750,10 @@ main > .banner { margin-top: 0; }
    colour scheme. Add class="banner is-light" to switch. */
 .banner.is-light::after {
   background: linear-gradient(to top,
-    oklch(0.99 0.006 62 / 0.92) 0%,
-    oklch(0.99 0.006 62 / 0.62) 38%,
-    oklch(0.99 0.006 62 / 0.12) 78%,
-    oklch(0.99 0.006 62 / 0.04) 100%);
+    oklch(0.99 0.004 80 / 0.92) 0%,
+    oklch(0.99 0.004 80 / 0.62) 38%,
+    oklch(0.99 0.004 80 / 0.12) 78%,
+    oklch(0.99 0.004 80 / 0.04) 100%);
 }
 
 .banner.is-light h1 { color: oklch(0.22 0.012 48); }
@@ -925,22 +940,28 @@ main > .banner { margin-top: 0; }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper:       oklch(0.185 0.010 48);
-    --paper-warm:  oklch(0.228 0.012 48);
-    --paper-deep:  oklch(0.262 0.013 48);
-    --ink:         oklch(0.945 0.008 70);
-    --ink-soft:    oklch(0.780 0.013 64);
-    --ink-faint:   oklch(0.618 0.016 58);
-    --rule:        oklch(0.312 0.013 50);
-    --rule-strong: oklch(0.392 0.014 50);
-    --accent:      oklch(0.712 0.125 36);
-    --accent-deep: oklch(0.790 0.110 40);
+    --paper:       oklch(0.272 0.026 71);   /* #2f2519 */
+    --paper-warm:  oklch(0.376 0.022 64);   /* #4a3f35 */
+    --paper-deep:  oklch(0.440 0.022 62);
+    --ink:         oklch(0.955 0.012 78);
+    --ink-soft:    oklch(0.800 0.018 70);
+    --ink-faint:   oklch(0.645 0.024 66);
+    --rule:        oklch(0.400 0.022 64);
+    --rule-strong: oklch(0.500 0.024 62);
+    --accent:      oklch(0.721 0.182 52);   /* #fa7d09 */
+    --accent-deep: oklch(0.800 0.135 58);
+    --accent-bright: oklch(0.658 0.231 35); /* #ff4301 — ornament */
+    --foot-bg:    transparent;
+    --foot-ink:   var(--ink);
+    --foot-faint: var(--ink-faint);
+    --foot-link:  var(--ink-faint);
+    --foot-rule:  var(--rule);
     --hairline: color-mix(in oklab, var(--ink) 18%, transparent);
-    --egg-fill: oklch(0.94 0.018 85);
-    --egg-yolk-fill: oklch(0.78 0.155 68);
-    --egg-line: oklch(0.94 0.018 85);
-    --egg-yolk-line: oklch(0.60 0.14 56);
-    --egg-yolk-hover: oklch(0.85 0.16 72);
+    --egg-fill: oklch(0.945 0.016 82);
+    --egg-yolk-fill: var(--accent);
+    --egg-line: oklch(0.945 0.016 82);
+    --egg-yolk-line: var(--accent-bright);
+    --egg-yolk-hover: oklch(0.820 0.190 45);
     color-scheme: dark;
   }
 
@@ -949,22 +970,28 @@ main > .banner { margin-top: 0; }
 }
 
 :root[data-theme="dark"] {
-  --paper:       oklch(0.185 0.010 48);
-  --paper-warm:  oklch(0.228 0.012 48);
-  --paper-deep:  oklch(0.262 0.013 48);
-  --ink:         oklch(0.945 0.008 70);
-  --ink-soft:    oklch(0.780 0.013 64);
-  --ink-faint:   oklch(0.618 0.016 58);
-  --rule:        oklch(0.312 0.013 50);
-  --rule-strong: oklch(0.392 0.014 50);
-  --accent:      oklch(0.712 0.125 36);
-  --accent-deep: oklch(0.790 0.110 40);
+  --paper:       oklch(0.272 0.026 71);   /* #2f2519 */
+  --paper-warm:  oklch(0.376 0.022 64);   /* #4a3f35 */
+  --paper-deep:  oklch(0.440 0.022 62);
+  --ink:         oklch(0.955 0.012 78);
+  --ink-soft:    oklch(0.800 0.018 70);
+  --ink-faint:   oklch(0.645 0.024 66);
+  --rule:        oklch(0.400 0.022 64);
+  --rule-strong: oklch(0.500 0.024 62);
+  --accent:      oklch(0.721 0.182 52);   /* #fa7d09 */
+  --accent-deep: oklch(0.800 0.135 58);
+  --accent-bright: oklch(0.658 0.231 35); /* #ff4301 — ornament */
+  --foot-bg:    transparent;
+  --foot-ink:   var(--ink);
+  --foot-faint: var(--ink-faint);
+  --foot-link:  var(--ink-faint);
+  --foot-rule:  var(--rule);
   --hairline: color-mix(in oklab, var(--ink) 18%, transparent);
-  --egg-fill: oklch(0.94 0.018 85);
-  --egg-yolk-fill: oklch(0.78 0.155 68);
-  --egg-line: oklch(0.94 0.018 85);
-  --egg-yolk-line: oklch(0.60 0.14 56);
-  --egg-yolk-hover: oklch(0.85 0.16 72);
+  --egg-fill: oklch(0.945 0.016 82);
+  --egg-yolk-fill: var(--accent);
+  --egg-line: oklch(0.945 0.016 82);
+  --egg-yolk-line: var(--accent-bright);
+  --egg-yolk-hover: oklch(0.820 0.190 45);
   color-scheme: dark;
 }
 
