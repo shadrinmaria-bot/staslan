@@ -30,8 +30,9 @@ The design direction is recorded in `.impeccable.md`; the short version:
 - **Space** — a 4pt scale with semantic names, fluid section rhythm, body
   measure capped at 66ch.
 - **Print devices** — hairline rules, dotted menu leaders in the ingredient
-  lists, numbered steps and places, one raised initial per page, and a
-  timeline split into two eras, each hung off its own hairline axis.
+  lists, numbered steps and places, one raised initial per page, a timeline
+  split into two eras on parallel hairline axes, and a method split into two
+  phases with each step's clock out in the right margin.
 - Responsive to phone width, dark theme via `prefers-color-scheme`, one
   staggered reveal on load that respects `prefers-reduced-motion`.
 

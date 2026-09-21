@@ -103,8 +103,8 @@ body {
 
 main {
   padding-bottom: var(--section);
-  /* places are numbered once across the page, not once per section */
-  counter-reset: place;
+  /* numbered once across the page, so a second list continues the count */
+  counter-reset: place step;
 }
 
 section { margin-top: var(--section); }
@@ -480,24 +480,58 @@ figcaption {
 }
 
 /* ---------- steps -------------------------------------------- */
+/* Two phases: five steps you do hours ahead, three in the last two
+   minutes. Each step keeps its clock out in the right margin, so the
+   shape of the afternoon is readable without reading the prose. */
+
+.phase + .pull { margin-top: var(--space-2xl); }
+.pull + .phase { margin-top: var(--space-3xl); }
+
+.phase > .eyebrow { margin-bottom: var(--space-md); }
+
+.pull {
+  font-family: var(--display);
+  font-size: var(--display-lg);
+  line-height: 1.16;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+  max-width: 24ch;
+  margin-left: calc(3.5rem + var(--space-xl));
+  text-wrap: balance;
+}
 
 .steps {
   list-style: none;
   margin: 0;
   padding: 0;
-  counter-reset: step;
 }
 
 .steps > li {
   counter-increment: step;
   display: grid;
-  grid-template-columns: 3.5rem 1fr;
-  gap: var(--space-lg);
-  padding-block: var(--space-lg);
+  grid-template-columns: 3.5rem minmax(0, 34rem) 1fr;
+  gap: var(--space-xs) var(--space-xl);
+  padding-block: var(--space-md);
   border-top: 1px solid var(--rule);
 }
 
 .steps > li:last-child { border-bottom: 1px solid var(--rule); }
+
+.clock {
+  grid-column: 3;
+  grid-row: 1 / -1;
+  align-self: start;
+  justify-self: end;
+  text-align: right;
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+  line-height: 1.32;
+  color: var(--ink-faint);
+  max-width: none;
+}
 
 .steps > li::before {
   content: counter(step, decimal-leading-zero);
@@ -505,10 +539,10 @@ figcaption {
   grid-row: 1 / -1;
 }
 
-.steps > li > * { grid-column: 2; }
+.steps > li > :not(.clock) { grid-column: 2; }
 
 .steps h3 { margin-bottom: var(--space-2xs); }
-.steps p { margin: 0; max-width: 58ch; }
+.steps p { margin: 0; max-width: 54ch; }
 
 /* ---------- places ------------------------------------------- */
 
@@ -616,7 +650,17 @@ figcaption {
 
   .place > div:first-child::before { margin-bottom: var(--space-2xs); }
 
-  .steps > li { grid-template-columns: 2.5rem 1fr; gap: var(--space-md); }
+  .steps > li { grid-template-columns: 2.5rem 1fr; gap: var(--space-xs) var(--space-md); }
+
+  .clock {
+    grid-column: 2;
+    grid-row: auto;
+    justify-self: start;
+    text-align: left;
+    margin-top: var(--space-2xs);
+  }
+
+  .pull { margin-left: 0; }
 
   .site-head { position: static; }
   .site-head .wrap { padding-block: var(--space-md); }
