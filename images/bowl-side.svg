@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="A minimal side view of a steaming ramen bowl, with chopsticks lifting a tangle of noodles.">
+  <rect width="640" height="420" fill="#f2efe9"/>
+
+  <!-- steam -->
+  <g fill="none" stroke="#a8a29a" stroke-width="2.2" stroke-linecap="round" opacity="0.8">
+    <path d="M 256 206 q -16 -32 4 -54 q 20 -22 4 -48"/>
+    <path d="M 312 196 q -14 -28 4 -48 q 18 -20 2 -42"/>
+  </g>
+
+  <!-- table -->
+  <line x1="56" y1="350" x2="584" y2="350" stroke="#241f1b" stroke-width="1.5"/>
+
+  <!-- bowl body -->
+  <g>
+    <path d="M 180 232 Q 196 340 320 340 Q 444 340 460 232 Z" fill="#fffdf8" stroke="#241f1b" stroke-width="2.4"/>
+    <path d="M 200 278 Q 320 292 440 278" fill="none" stroke="#b8472d" stroke-width="5" opacity="0.9"/>
+    <path d="M 206 294 Q 320 307 434 294" fill="none" stroke="#241f1b" stroke-width="1" opacity="0.2"/>
+    <rect x="288" y="338" width="64" height="12" rx="4" fill="#f7f4ee" stroke="#241f1b" stroke-width="2"/>
+  </g>
+
+  <!-- broth surface -->
+  <ellipse cx="320" cy="232" rx="140" ry="22" fill="#cfa463" stroke="#241f1b" stroke-width="2.4"/>
+  <ellipse cx="320" cy="232" rx="140" ry="22" fill="none" stroke="#e0c785" stroke-width="1" opacity="0.6"/>
+
+  <!-- toppings on the surface -->
+  <g stroke="#241f1b" stroke-width="1.8">
+    <rect x="216" y="182" width="44" height="56" rx="3" fill="#25322e"/>
+    <g>
+      <ellipse cx="300" cy="226" rx="24" ry="20" fill="#fdf7ea"/>
+      <ellipse cx="300" cy="226" rx="11" ry="9" fill="#e8a33c" stroke="none"/>
+    </g>
+    <ellipse cx="362" cy="230" rx="30" ry="13" fill="#e5b08f"/>
+    <g fill="#7c9b62" stroke="#5c774a" stroke-width="1">
+      <circle cx="248" cy="240" r="4"/>
+      <circle cx="268" cy="245" r="4"/>
+      <circle cx="404" cy="238" r="4"/>
+      <circle cx="418" cy="232" r="4"/>
+    </g>
+  </g>
+
+  <!-- noodles lifted clear of the bowl -->
+  <g fill="none" stroke="#f4e5bd" stroke-width="4" stroke-linecap="round">
+    <path d="M 396 176 q -18 36 -10 62"/>
+    <path d="M 404 178 q -6 40 -18 58"/>
+    <path d="M 412 178 q 8 36 -2 60"/>
+    <path d="M 418 174 q 16 30 10 54"/>
+  </g>
+
+  <!-- chopsticks -->
+  <g stroke="#241f1b" stroke-width="1.4" fill="#d9c9ae">
+    <rect x="424" y="26" width="9" height="156" rx="4" transform="rotate(14 428 104)"/>
+    <rect x="442" y="26" width="9" height="156" rx="4" transform="rotate(14 446 104)"/>
+  </g>
+
+  <!-- renge spoon resting on the table -->
+  <g stroke="#241f1b" stroke-width="1.8" fill="#fffdf8">
+    <path d="M 96 318 q 0 -22 26 -22 q 26 0 26 22 q 0 20 -26 20 q -26 0 -26 -20 Z"/>
+    <path d="M 146 306 q 22 -6 34 -14 q 8 -6 2 -12 q -6 -6 -14 0 q -10 8 -24 12 Z" fill="#d9c9ae"/>
+  </g>
+</svg>
