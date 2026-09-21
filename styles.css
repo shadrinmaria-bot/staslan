@@ -352,19 +352,45 @@ figcaption {
 }
 
 /* ---------- timeline ----------------------------------------- */
+/* Two eras side by side, each hung off its own axis: the seam falls
+   where ramen stops being street food and starts being an industry. */
 
-.timeline { list-style: none; margin: 0; padding: 0; }
-
-.timeline > li {
+.eras {
   display: grid;
-  grid-template-columns: 7rem 1fr;
-  gap: var(--space-md) var(--col-gap);
-  padding-block: var(--space-lg);
-  border-top: 1px solid var(--rule);
-  transition: background-color var(--fast) ease;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl) var(--col-gap);
 }
 
-.timeline > li:last-child { border-bottom: 1px solid var(--rule); }
+.era > .eyebrow { margin-bottom: var(--space-md); }
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 var(--space-lg);
+  border-left: 1px solid var(--rule);
+}
+
+.timeline > li {
+  position: relative;
+  padding-bottom: var(--space-lg);
+}
+
+.timeline > li:last-child { padding-bottom: 0; }
+
+/* the tick, ringed in paper so the axis appears to pass behind it */
+.timeline > li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--space-lg) - 3px);
+  top: 0.58em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--paper);
+}
+
+.timeline .year { display: block; margin-bottom: var(--space-2xs); }
 
 /* Years, step numbers and place numbers are one thing in three places:
    same face, size, weight and colour on every page. */
@@ -380,7 +406,7 @@ figcaption {
   color: var(--accent);
 }
 
-.timeline p { margin: 0; max-width: 58ch; }
+.timeline p { margin: 0; max-width: 42ch; }
 
 /* ---------- recipe meta -------------------------------------- */
 
@@ -574,7 +600,6 @@ figcaption {
 
 @media (max-width: 62rem) {
   .place { grid-template-columns: 10rem 1fr; }
-  .timeline > li { grid-template-columns: 5.5rem 1fr; }
 }
 
 @media (max-width: 46rem) {
@@ -585,7 +610,8 @@ figcaption {
 
   .split.reverse > :first-child { order: 0; }
 
-  .timeline > li,
+  .eras { grid-template-columns: 1fr; }
+
   .place { grid-template-columns: 1fr; gap: var(--space-sm); }
 
   .place > div:first-child::before { margin-bottom: var(--space-2xs); }
