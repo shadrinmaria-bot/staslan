@@ -662,6 +662,21 @@ main > .banner { margin-top: 0; }
   color: oklch(0.975 0.008 70);
 }
 
+/* A light photograph needs the opposite treatment: pale scrim, dark type.
+   Both are fixed values, because the photograph does not change with the
+   colour scheme. Add class="banner is-light" to switch. */
+.banner.is-light::after {
+  background: linear-gradient(to top,
+    oklch(0.99 0.006 62 / 0.92) 0%,
+    oklch(0.99 0.006 62 / 0.62) 38%,
+    oklch(0.99 0.006 62 / 0.12) 78%,
+    oklch(0.99 0.006 62 / 0.04) 100%);
+}
+
+.banner.is-light h1 { color: oklch(0.22 0.012 48); }
+.banner.is-light .banner-text .eyebrow { color: oklch(0.45 0.016 50); }
+.banner.is-light .banner-text .eyebrow::after { background: oklch(0.45 0.016 50 / 0.4); }
+
 /* the banner runs to the page edges, so the column below it needs its own air */
 .banner + .wrap { padding-top: var(--section); }
 

@@ -73,7 +73,15 @@ browser-tab icon, which needs to stay vector. The other illustrations were
 replaced by the photographs and remain in git history.
 
 `IMAGE-PROMPTS.md` holds the prompts the photographs were generated from, so a
-replacement can be matched to the same set.
+replacement can be matched to the same set. Prompt 8 is image-to-image: it
+takes a photograph of you holding a bowl and rebuilds it as the banner.
+
+The banner comes in two treatments, because the type has to hold against
+whatever photograph sits behind it. A dark picture is the default: pale scrim,
+near-white type. For a light one, add the modifier —
+`<section class="banner is-light">` — and it flips to a pale scrim with dark
+type. Both use fixed values rather than theme tokens, since the photograph
+does not change with the colour scheme.
 
 To use real photographs instead, drop them in `images/` and change the `src` on
 the relevant `<img>`: the layout sizes images by their container, so a landscape

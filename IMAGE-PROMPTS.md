@@ -112,23 +112,109 @@ Where it goes: Places hero.
 Where it goes: Places, the wide band between the Israel and Japan sections.
 This one replaces the Israel↔Japan diagram, so its caption will change with it.
 
-## 8 · Banner — `08-banner.jpg` · 21:9 (2400 × 1030)
+## 8 · Banner, from your own photograph — `08-banner.jpg` · 21:9 (2400 × 1030)
 
-The home page banner currently reuses the alley photograph, so the same
-picture appears twice on the site. This prompt replaces it; the file name is
-already wired in, so dropping a new `08-banner` in `images/` is the whole
-swap.
+This one is image-to-image: you supply a photograph of yourself holding a
+bowl, and the model relights and reframes it into the site's banner rather
+than inventing a new person. The file name is already wired in, so dropping a
+new `08-banner` in `images/` is the whole swap. Until then the banner reuses
+the alley photograph.
+
+Two things the banner needs from the composition, whichever variant you pick:
+**you on the right, the left two-thirds quiet**, because the label and the
+title sit bottom-left over the photograph; and **width** — it spans the whole
+window, so anything under about 2000 px softens on a large screen.
+
+### The source photograph
+
+What gives the model the most to work with:
+
+- Waist-up or half-length, shot **horizontally**, both hands on the bowl at
+  about chest height. A tight headshot leaves nothing to crop into a wide band.
+- Even, soft light on your face — a window, or shade outdoors. No hard flash,
+  no strong colour cast from a screen or a neon sign.
+- A plain, uncluttered background; it is going to be replaced anyway, but a
+  busy one bleeds into the result.
+- Looking either straight at the camera or down into the bowl. Both read well;
+  down into the bowl is warmer and needs less of your face to survive editing.
+- 1500 px or more on the long edge.
+
+### Variant A · night counter — recommended
+
+Works with the banner exactly as it is built: near-white type over a dark
+photograph.
+
+> Use the supplied photograph as the source for the person. Keep their face,
+> hair, build, glasses and clothing exactly as they are — do not restyle,
+> beautify, slim, smooth, age or otherwise change them, and do not replace
+> them with a different person. Only relight them and rebuild the scene
+> around them.
+>
+> Rebuild it as a wide editorial banner: they are sitting at a small ramen
+> counter late at night, holding a steaming bowl of ramen in both hands, lit
+> by one warm overhead lamp above the counter. Place them in the right third
+> of the frame, turned slightly toward the camera. The left two-thirds falls
+> away into deep brown-black shadow with almost nothing in it. Warm amber
+> light on the bowl, their hands and one side of their face; steam rising and
+> catching the lamp. Muted warm palette: cream, warm grey, brown-black and a
+> single vermilion accent. Medium format look, 80mm, f/2.8, natural colour,
+> fine film grain. No text, no signage, no logos, no watermarks.
+>
+> 21:9, 2400 × 1030.
+
+### Variant B · cream daylight
+
+Matches the daylight photographs on the Story and Recipe pages. It needs the
+banner's other treatment — dark type over a pale scrim — which is one class
+in the markup: `<section class="banner is-light">`.
+
+> Use the supplied photograph as the source for the person. Keep their face,
+> hair, build, glasses and clothing exactly as they are — do not restyle,
+> beautify, slim, smooth, age or otherwise change them, and do not replace
+> them with a different person. Only relight them and rebuild the scene
+> around them.
+>
+> Rebuild it as a wide editorial banner: they are standing against a plain
+> warm paper-cream wall in soft diffused north-window daylight, holding a
+> bowl of ramen at chest height in both hands, looking down into it. Place
+> them in the right third of the frame; the left two-thirds is empty
+> paper-cream wall. Gentle honest shadows, matte surfaces, faint steam, no
+> props and nothing else in the frame. Muted warm palette: cream, warm grey,
+> brown-black and a single vermilion accent. Medium format look, 80mm, f/4,
+> natural colour, fine film grain. No text, no signage, no logos, no
+> watermarks.
+>
+> 21:9, 2400 × 1030.
+
+### Negative prompt
+
+> different face, changed identity, beauty filter, smoothed skin, plastic
+> skin, distorted face, extra fingers, malformed hands, warped bowl, text,
+> letters, watermark, logo, 3D render, CGI, cartoon, oversaturated, HDR,
+> teal-orange grading, busy background
+
+### Tool notes
+
+- **Gemini / Nano Banana, ChatGPT image editing, Flux Kontext** — attach the
+  photograph and paste the prompt as an edit instruction. The identity
+  sentence at the top is what keeps your face yours; leave it in.
+- **Midjourney** — put the photograph's URL first, then the prompt, then
+  `--ar 21:9 --iw 2`. For a closer likeness use `--cref <photo url> --cw 100`.
+- **If the tool cannot output 21:9**, generate 3:2 with yourself right of
+  centre and plenty of headroom, and it can be cropped to the band afterwards.
+- Generate three or four and pick — identity survives some runs better than
+  others. Check hands and the rim of the bowl before choosing; those are where
+  these models fail first.
+
+### Without a photograph
+
+If you would rather keep people out of it:
 
 > A wide, dark, atmospheric banner: the far end of a ramen counter late at
 > night, three bowls set out along the worn wood, steam drifting up through
 > one warm overhead light. Deep brown-black shadow fills the left third of
 > the frame with almost nothing in it. Warm light pooled to the right. No
 > faces, no hands, no readable signage.
-
-Where it goes: the full-bleed banner on the home page. Keep the left third
-quiet — the title and label sit there, in near-white over the photograph.
-Generate it wide: the banner spans the whole window, so anything narrower
-than about 2000 px softens on a large screen.
 
 ---
 
